@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부산국제영화제</title>
+
+    <link rel="stylesheet" href="css/clear.css" type="text/css">
+    <link rel="stylesheet" href="css/pc.css" type="text/css">
+    <link rel="stylesheet" href="css/mo.css" type="text/css">
+
+
+    <script src="js/jquery-3.6.1.min.js"></script>
+
+    <script>
+
+        $(document).ready(function(){
+
+
+            //sec02 img =================
+            var i = 0;
+            var b = $('#img_wrap img').width();
+
+
+            var half = $('#img_wrap').width();
+
+
+
+            var sec02_w = $('.con02_img').width();
+
+
+
+
+            $('#right img').click(function(){
+                i++;
+                if( i > 3 ){
+                    i = 0;
+                }
+                $('#img_wrap').animate({
+                    left : (-sec02_w - 30) * i ,
+                })/* .find('.con02_img').first().appendTo('#img_wrap') */;
+            });
+
+
+            $('#left img').click(function(){
+                i--;
+                if( i < 0 ){
+                    i = 3;
+                }
+                $('#img_wrap').animate({
+                    left : (-sec02_w - 30) * i,
+                });
+            });
+
+
+            setInterval(function(){
+                $('#right img').trigger('click');
+            },2000);
+
+
+
+
+
+
+
+            //header search_top img color hover =============
+            var a = 0;
+
+
+            $('#search_top').hover(function(){
+
+                if( a == 0 ){
+                    $('#search_top img').attr({
+                    src : 'img/header_btn02.png',
+                    });
+                    a++;
+
+                }else if( a == 1 ){
+                    $('img',this).attr({
+                        src : "img/header_btn.png",
+                    });
+                    a--;
+                }
+
+            });
+
+
+
+
+
+
+
+
+
+
+            
+        });//end
+
+
+
+
+
+    </script>
+
+</head>
+
+
+    
+
+<body>
+
+<div id="overflow">
+    
+    <div id="wrap">
+
+        <!-- header -->
+        <header>
+
+            <div id="in_header">
+
+                <div class="logo">   
+                    <div class="img">
+                        <a href="#"><img src="img/logo.png" alt="로고"></a>
+                    </div> 
+                    <a href="#">
+                        27th BUSAN <br/>
+                        lnternational Film festva <br/> 
+                        5 -14 October 2022
+                    </a>
+                </div>
+
+                <ul id="menu_wrap">
+                    <li><a href="#">2022 BlFF</a></li>
+                    <li><a href="#">행사안내</a></li>
+                    <li><a href="#">공식상영작</a></li>
+                    <li><a href="#">배치안내</a></li>
+                    <li><a href="#">커뮤니티</a></li> 
+                </ul>
+
+                <ul id="side">
+                    <li>
+                        <div id="search_top">
+                            <a href="#"><img src="img/header_btn.png" alt="검색버튼"></a>
+                        </div>
+                    </li>
+                    <li><a href="#">LOGIN</a></li>
+                </ul>
+
+            </div>
+
+
+
+        </header>
+
+
+
+        <!-- sec01 -->
+        <section id="sec01" >
+
+                <img src="img/sec01_main01.jpg" alt="확인용">
+    
+                <div id="sec01_text">
+                    <h6>제 27회</h6><h1> 아시아 스타 어워즈</h1>
+                    <p><a href="#">
+                        올해 아시아 영화계를 빛낸 아름다운 얼굴들 <br/>
+                        지금 확인해보세요
+                    </p></a>
+
+                    <p class="con04_btn" id="sec01_btn">
+                        <a href="#"> <img src="img/right_btn.png" alt="오른쪽버튼"></a>
+                    </p>
+
+                    <h4>올해의 배우상  :  이병헌</h4>
+                </div>   
+
+        </section>
+
+        <ul id="battom_menu">
+            <li>
+                <a href="#">
+                    <img src="img/sec01menu.png" alt="이미지">
+                    <h4>예매하기</h4> <!-- 오타 조심  -->
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="img/sec01menu.png" alt="이미지">
+                    <h4>고객센터</h4>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="img/sec01menu.png" alt="이미지">
+                    <h4>BIFF 이벤트</h4>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="img/sec01menu.png" alt="이미지">
+                    <h4>행사안내</h4>
+                </a>
+            </li>
+        </ul>
+
+        <div id="background_con01"></div>
+
+
+
+
+
+        <!-- sec02 -->
+        <section id="sec02">
+ 
+            <div id="left"><img src="img/left_btn.png" alt="왼쪽버튼"></div>
+            <div id="right"><span><img src="img/right_btn.png" alt="오른쪽버튼"></span></div>
+
+            <div class="container">
+
+                <div class="text_box">2022 BIFF | 공식상영작</div>
+
+
+
+
+                <div id="sec02_ck">
+
+                        <div id="img_wrap">
+
+
+
+                            <ul id="sec02_img_box">
+                                
+                                <li class="con02_img">
+                                    <div class="hover_img">
+                                        <div class="sec02_top_btn"><a href="#">얘매하기</a></div>
+                                        <div class="sec02_battom_btn"><a href="#">상세보기</a></div>
+                                    </div>
+                                </li> 
+                                
+                                <li class="con02_img">
+                                    <div class="hover_img">
+                                        <div class="sec02_top_btn"><a href="#">얘매하기</a></div>
+                                        <div class="sec02_battom_btn"><a href="#">상세보기</a></div>
+                                    </div>
+                                </li> 
+                                
+                                <li class="con02_img">
+                                    <div class="hover_img">
+                                        <div class="sec02_top_btn"><a href="#">얘매하기</a></div>
+                                        <div class="sec02_battom_btn"><a href="#">상세보기</a></div>
+                                    </div>
+                                </li> 
+
+                                
+                                <li class="con02_img">
+                                    <div class="hover_img">
+                                        <div class="sec02_top_btn"><a href="#">얘매하기</a></div>
+                                        <div class="sec02_battom_btn"><a href="#">상세보기</a></div>
+                                    </div>
+                                </li> 
+
+                                
+                                <li class="con02_img">
+                                    <div class="hover_img">
+                                        <div class="sec02_top_btn"><a href="#">얘매하기</a></div>
+                                        <div class="sec02_battom_btn"><a href="#">상세보기</a></div>
+                                    </div>
+                                </li> 
+                                
+
+                                <li class="con02_img">
+                                    <div class="hover_img">
+                                        <div class="sec02_top_btn"><a href="#">얘매하기</a></div>
+                                        <div class="sec02_battom_btn"><a href="#">상세보기</a></div>
+                                    </div>
+                                </li> 
+
+                            </ul>
+
+
+
+                        </div>
+
+                </div>
+
+
+
+
+                
+            </div>
+
+                   
+            <div class="circle_img sec02_cir" id="cir02">
+                <img src="img/style.png" alt="동그라미">
+            </div>
+
+            <div id="sec02_line"></div>
+
+        </section>
+
+
+
+        <!-- sec03 -->
+        <section id="sec03">
+
+            <div class="container">
+
+                <div id="sec03_half">
+
+                    <div id="sec03_text_box">
+
+                        <h1>BIFF 2022 | 리뷰이벤트</h1>
+                        <p>티켓 사진과 함께 관람 후기를 <br/>
+                            #BIFF2022_리뷰이벤트 태그해서 업로드 해주세요! </p>
+
+                       <a href="#"><div id="sec03_btn">이벤트 참여하기</div></a>
+
+                    </div>
+
+                </div>
+
+            
+        </section>
+
+
+
+        <!-- sec04 -->
+        <section id="sec04">
+
+            <div class="container">
+                
+                <div id="con04_out_box01">
+
+                    <div class="text_box">BIFF2022 | <span>영화제 데일리 영상 DAY 10</span></div>
+                    <iframe width="100%" height="513" src="https://www.youtube.com/embed/OFc4p1tm-PM" title="BIFF2022 | 부산국제영화제 데일리 영상 DAY 10" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    
+                    <p class="con04_btn">
+                        <a href="#">다른 영상 바로 가기</a>
+                        <img src="img/right_btn.png" alt="오른쪽버튼">
+                    </p>
+                </div>
+
+                
+            <div class="circle_img" id="cir04">
+                <img src="img/style.png" alt="동그라미">
+            </div>
+
+
+
+
+
+                <div id="con04_out_box02">
+                
+                    <div class="con04_in_box">
+
+                        <div class="text_box">공지사항</div>
+
+                        <ul id="con04_list">
+                            <li><a href="#">[공지] 예매권 환불 신청 안내</a></li>
+                            <li><a href="#">[공지] 제27회 영화제 폐막식 티켓 현장 판매 안내..</a></li>
+                            <li><a href="#">[공지] P&I(Press & Industry) 추가상영안내</a></li>
+                            <li><a href="#">[공지] 제27회 부산국제영화제 단체관람 신청 안내..</a></li>
+                        </ul>
+
+                        <p class="con04_btn">
+                            
+                            <a href="#">더보기</a>
+                            <img src="img/right_btn.png" alt="오른쪽버튼">
+
+                        </p>
+                         
+                    </div>
+
+
+                    <div class="con04_in_box">
+
+                        <div class="text_box">BIFF2022 |<span> 이벤트</span></div>
+
+                        <div id="con04_img_box">
+
+                            <div class="img04_box">
+                                <a href="#"><img src="img/sec04_img01.png" alt="이벤트사진"></a>
+                                <div class="sec04_hover"></div>
+                            </div>
+
+                            <div class="img04_box">
+                                <a href="#"><img src="img/sec04_img02-1.jpg" alt="이벤트사진"></a>
+                                <div class="sec04_hover"></div>
+                            </div>
+
+                        </div>
+
+                        <p class="con04_btn">
+                            <a href="#"><span>더보기</span>
+                                <img src="img/righ_btn02.png" alt="오른쪽버튼">
+                            </a>
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+            
+        </section>
+
+
+
+        <!-- sec05 -->
+        <section id="sec05">
+
+            <div class="container">
+                
+                <div class="con05_out_box">
+                    
+                    <div class="text_box">스토리</div>
+
+                    <div class="con05_in_box">
+                        <a href="#">
+
+                            <div class="img05_box one">
+                                <img src="img/sec05_img01.jpg" alt="스토리">
+                            </div>
+                            <div class="img05_box">
+
+                                <div class="text05_box">
+                                    <h2>[BIFF 보도자료]</h2>
+                                    <p> 제4회 아시아콘텐츠어워즈 수상작 발표!</p>
+                                </div>
+                            </div>
+                            
+                        </a>
+                    </div>
+                
+                    
+                </div>
+
+                <div class="con05_out_box">
+                    
+                    <div class="text_box">시민평론단_리뷰</div>
+                    
+                    <div class="con05_in_box">
+                        <a href="#">
+
+                            <div class="img05_box">
+                                <img src="img/sec05_img02.jpg" alt="느슨한연대사진">
+                            </div>
+                            <div class="img05_box">
+                                <div class="text05_box">
+                                    <h2>[느슨한 연대]</h2>
+                                    <p> 
+                                        이 영화는 한 여성이 상경 후 
+                                        생활하기로 이미 이야기가 된 집으로 이동하는 택시에서 시작한다..</p> 
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                    
+
+                </div>
+
+            </div>
+
+            <div class="circle_img sec05_cir">
+                <img src="img/style02.png" alt="동그라미">
+            </div>
+
+
+        </section>
+
+
+
+        <!-- footer -->
+        <footer>
+            <div class="container">
+
+                <div id="left_footer">
+
+                    <ul id="foot_list">
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">찾아오시는 길</a></li>
+                        <li><a href="#">저작권정책</a></li>
+                        <li><a href="#">역대영화제</a></li>
+                    </ul>
+
+                    <p>부산사무국 (48058) 부산광역시 해운대구 수영강변대로 120 영화의전당 비프힐 3층 <br/>
+                        서울사무소 (03131) 서울특별시 종로구 율곡로 84 가든타워 1601호 <br/>
+                        © Busan International Film Festival</p>
+
+                </div>
+
+                <div id="right_footer">
+
+                    <ul id="sns_btn">
+                        <li><a href="#"><img src="img/instar.png" alt="인스타"></a></li>
+                        <li><a href="#"><img src="img/twitter.png" alt="트위터"></a></li>
+                        <li><a href="#"><img src="img/facebook.png" alt="페이스북"></a></li>
+                    </ul>
+
+                    <div class="logo">   
+                        <div class="img">
+                            <img src="img/logo02.png" alt="로고">
+                        </div> 
+                        <a href="#">
+                            27th BUSAN <br/>
+                            lnternational Film festva <br/> 
+                            5 -14 October 2022
+                        </a>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </footer>
+
+
+
+
+
+    </div>
+
+</div>
+
+
+</body>
+</html>
